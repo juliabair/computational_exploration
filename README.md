@@ -4,7 +4,9 @@
 
 A dance performance combining computer science and dance utilizing
 custom Java and Python programs to randomize and increasingly control
-the choreography.
+the choreography. Below is the video link of the performance.
+
+<https://youtu.be/AC4NNd7Igj4>
 
 ## Details
 
