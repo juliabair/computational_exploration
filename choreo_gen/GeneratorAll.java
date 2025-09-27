@@ -1,26 +1,6 @@
 import java.util.*;
 
 public class GeneratorAll extends BodyPart {
-  // Variables
-  String[] body_parts = {
-    "r_leg",
-    "l_leg",
-    "r_arm",
-    "l_arm",
-    "head",
-    "r_hand",
-    "l_hand",
-    "r_foot",
-    "l_foot",
-    "r_elbow",
-    "l_elbow",
-    "hips",
-    "r_knee",
-    "l_knee",
-    "chest",
-    "r_shoulder",
-    "l_shoulder"
-  };
 
   // Method: to decide order of models?
   static ArrayList<String> model_standing_order() {
