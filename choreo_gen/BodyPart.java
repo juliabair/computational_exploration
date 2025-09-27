@@ -1,4 +1,4 @@
-public class Generator extends BodyPart {
+abstract class BodyPart {
   // Variables
 
   String[] body_parts = {
@@ -21,28 +21,17 @@ public class Generator extends BodyPart {
     "l_shoulder"
   };
 
-  // System.out.println(Arrays.toString(body_parts));
 
-  static int quadrants() {
-    int low = 1;
-    int high = 4;
-    int quad = low + (int) (Math.random() * ((high - low) + 1));
-    return quad;
-  }
-
-  // fluidity method
-  static int fluidity_level() {
+  // body_part method
+  static int body_part() {
     int low = 0;
-    int high = 5;
-    int fluid = low + (int) (Math.random() * ((high - low) + 1));
+    int high = 16;
+    int place_in_bp_array = low + (int) (Math.random() * ((high - low) + 1));
 
-    return fluid;
+    return place_in_bp_array;
   }
-
 
   public static void main(String[] args) {
-    System.out.println("Quadrant: " + quadrants());
-    System.out.println("Fluidity Level: " + fluidity_level());
 
     String[] body_parts = {
       "r_leg",

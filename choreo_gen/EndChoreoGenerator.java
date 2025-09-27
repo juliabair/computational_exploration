@@ -1,4 +1,4 @@
-public class EndChoreoGenerator {
+public class EndChoreoGenerator extends BodyPart {
   // Variables
   String[] body_parts = {
     "r_leg",
@@ -66,14 +66,6 @@ public class EndChoreoGenerator {
     return hands_on_self;
   }
 
-  // body_part method
-  static int body_part() {
-    int low = 0;
-    int high = 16;
-    int place_in_bp_array = low + (int) (Math.random() * ((high - low) + 1));
-
-    return place_in_bp_array;
-  }
 
   public static void main(String[] args) {
     System.out.println("Quadrants: " + quadrants() + " & " + quadrants());

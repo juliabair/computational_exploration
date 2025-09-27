@@ -2,13 +2,13 @@
 build:
 	@ find . -name "*.java" | while read file; do \
 		echo "Compling: file=$${file}" ; \
-		javac $${file} ; \
+		javac -cp ./choreo_gen $${file} ; \
 	done
 
 run: build
-	@ java ./choreo_gen/Generator.java
-	@ java ./choreo_gen/GeneratorAll.java
-	@ java ./choreo_gen/EndChoreoGenerator.java
+	@ java -cp ./choreo_gen Generator
+	@ java -cp ./choreo_gen GeneratorAll
+	@ java -cp ./choreo_gen EndChoreoGenerator
 
 clean:
 	@ find . -name "*.class" | while read file; do \
