@@ -6,11 +6,9 @@ build:
 	done
 
 run: build
-	@ find . -name "*.java" | while read file; do \
-        echo "" ; \
-		echo "Running: file=$${file}" ; \
-		java $${file} ; \
-	done
+	@ java ./solo_choreo_gen/Generator.java
+	@ java ./choreo_gen/GeneratorAll.java
+	@ java ./solo_choreo_gen/EndChoreoGenerator.java
 
 clean:
 	@ find . -name "*.class" | while read file; do \
