@@ -67,45 +67,33 @@ public class EndChoreoGenerator extends BodyPart {
   }
 
 
-  public static void main(String[] args) {
-    System.out.println("Quadrants: " + quadrants() + " & " + quadrants());
-    System.out.println("Focus Out Toward Audience, etc: " + focus());
-    System.out.println("Hands on self: " + hands());
+  public String generate() {
+    String response = "";
 
-    String[] body_parts = {
-      "r_leg",
-      "l_leg",
-      "r_arm",
-      "l_arm",
-      "head",
-      "r_hand",
-      "l_hand",
-      "r_foot",
-      "l_foot",
-      "r_elbow",
-      "l_elbow",
-      "hips",
-      "r_knee",
-      "l_knee",
-      "chest",
-      "r_shoulder",
-      "l_shoulder"
-    };
-    System.out.println(
-        "Body Parts Together 1: "
+    response += "Quadrants: " + quadrants() + " & " + quadrants() + "\n";
+    response += "Focus Out Toward Audience, etc: " + focus() + "\n";
+    response += "Hands on self: " + hands() + "\n";
+
+    response += "Body Parts Together 1: "
             + body_parts[body_part()]
             + " "
             + body_parts[body_part()]
             + " | Speed: "
             + speed()
-            + "/4");
-    System.out.println(
-        "Body Parts Together 2: "
+            + "/4" + "\n";
+    response += "Body Parts Together 2: "
             + body_parts[body_part()]
             + " "
             + body_parts[body_part()]
             + " | Speed: "
             + speed()
-            + "/4");
+            + "/4" + "\n";
+
+    return response;
+  }
+
+  public static void main(String[] args){
+    EndChoreoGenerator ecg1 = new EndChoreoGenerator();
+    System.out.println(ecg1.generate());
   }
 }

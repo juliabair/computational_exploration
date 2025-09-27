@@ -107,32 +107,14 @@ public class GeneratorAll extends BodyPart {
 
   // Method: Main
   // put body part array here(?)
-  public static void main(String[] args) {
-    String[] body_parts = {
-      "r_leg",
-      "l_leg",
-      "r_arm",
-      "l_arm",
-      "head",
-      "r_hand",
-      "l_hand",
-      "r_foot",
-      "l_foot",
-      "r_elbow",
-      "l_elbow",
-      "hips",
-      "r_knee",
-      "l_knee",
-      "chest",
-      "r_shoulder",
-      "l_shoulder"
-    };
+  public String generate() {
+    String response = "";
 
-    System.out.println("Model Standing Order: " + model_standing_order());
 
-    System.out.println("Facing Direction: ");
-    System.out.println(
-        "/*\n"
+    response += "Model Standing Order: " + model_standing_order() + "\n";
+
+    response += "Facing Direction: " + "\n";
+    response += "/*\n"
             + "         * 1 = forward\n"
             + "         * 2 = R\n"
             + "         * 3 = back\n"
@@ -141,11 +123,10 @@ public class GeneratorAll extends BodyPart {
             + "         * 6 = L Front Corner\n"
             + "         * 7 = R Back Corner\n"
             + "         * 8 = L Back Corner\n"
-            + "         */");
+            + "         */" + "\n";
 
-    System.out.println("Head Directions: ");
-    System.out.println(
-        "/*\n"
+    response += "Head Directions: " + "\n";
+    response += "/*\n"
             + "         * 1 = forward\n"
             + "         * 2 = R\n"
             + "         * 3 = L\n"
@@ -155,25 +136,29 @@ public class GeneratorAll extends BodyPart {
             + "         * 7 = Bottom L Corner\n"
             + "         * 8 = Top R Corner\n"
             + "         * 9 = Top L Corner\n"
-            + "         */");
+            + "         */" + "\n";
 
-    System.out.println("\nPose:");
-    System.out.println(
-        "Body Parts: "
+    response += "Pose:" + "\n";
+    response += "Body Parts: "
             + body_parts[body_part()]
             + " "
             + body_parts[body_part()]
             + " "
-            + body_parts[body_part()]);
-    System.out.println(
-        "Modifier 1: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
+            + body_parts[body_part()] + "\n";
+    response += "Modifier 1: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
             + " beveled? "
-            + boolean_output_for_bp());
-    System.out.println(
-        "Modifier 2: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
+            + boolean_output_for_bp() + "\n";
+    response += "Modifier 2: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
             + " beveled? "
-            + boolean_output_for_bp());
-    System.out.println("Facing: " + direction());
-    System.out.println("Head Direction: " + head_direction());
-  }
+            + boolean_output_for_bp() + "\n";
+    response += "Facing: " + direction() + "\n";
+    response += "Head Direction: " + head_direction() + "\n";
+    
+    return response;
+ }
+ 
+ public static void main(String[] args){
+    GeneratorAll ga1 = new GeneratorAll();
+    System.out.println(ga1.generate());
+ }
 }

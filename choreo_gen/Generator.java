@@ -21,8 +21,6 @@ public class Generator extends BodyPart {
     "l_shoulder"
   };
 
-  // System.out.println(Arrays.toString(body_parts));
-
   static int quadrants() {
     int low = 1;
     int high = 4;
@@ -39,32 +37,18 @@ public class Generator extends BodyPart {
     return fluid;
   }
 
+  public String generate(){
+    String response = "";
+    response += "Quadrant: " + quadrants()+ "\n";
+    response += "Fluidity Level: " + fluidity_level() + "\n";
+    response += "Body Part 1: " + body_parts[body_part()] + "\n";
+    response += "Body Part 2: " + body_parts[body_part()] + "\n";
+    response += "Body Part 3: " + body_parts[body_part()] + "\n";
+    return response;
+  }
 
   public static void main(String[] args) {
-    System.out.println("Quadrant: " + quadrants());
-    System.out.println("Fluidity Level: " + fluidity_level());
-
-    String[] body_parts = {
-      "r_leg",
-      "l_leg",
-      "r_arm",
-      "l_arm",
-      "head",
-      "r_hand",
-      "l_hand",
-      "r_foot",
-      "l_foot",
-      "r_elbow",
-      "l_elbow",
-      "hips",
-      "r_knee",
-      "l_knee",
-      "chest",
-      "r_shoulder",
-      "l_shoulder"
-    };
-    System.out.println("Body Part 1: " + body_parts[body_part()]);
-    System.out.println("Body Part 2: " + body_parts[body_part()]);
-    System.out.println("Body Part 3: " + body_parts[body_part()]);
+    Generator g1 = new Generator(); 
+    System.out.println(g1.generate());
   }
 }
