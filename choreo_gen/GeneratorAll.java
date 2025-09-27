@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class GeneratorAll extends BodyPart {
+public class ModelPoses extends BodyPart {
 
   // Method: to decide order of models?
   static ArrayList<String> model_standing_order() {
@@ -146,7 +146,7 @@ public class GeneratorAll extends BodyPart {
   }
 
   public static void main(String[] args) {
-    GeneratorAll ga1 = new GeneratorAll();
-    System.out.println(ga1.generate());
+    ModelPoses modelPoses = new ModelPoses();
+    System.out.println(modelPoses.generate());
   }
 }

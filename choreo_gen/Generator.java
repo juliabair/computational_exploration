@@ -1,4 +1,4 @@
-public class Generator extends BodyPart {
+public class FirstSolo extends BodyPart {
 
   static int quadrants() {
     int low = 1;
@@ -27,7 +27,7 @@ public class Generator extends BodyPart {
   }
 
   public static void main(String[] args) {
-    Generator g1 = new Generator();
-    System.out.println(g1.generate());
+    FirstSolo firstSolo = new FirstSolo();
+    System.out.println(firstSolo.generate());
   }
 }

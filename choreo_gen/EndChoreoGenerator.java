@@ -1,4 +1,4 @@
-public class EndChoreoGenerator extends BodyPart {
+public class FinalSolo extends BodyPart {
 
   static int quadrants() {
     int low = 1;
@@ -76,7 +76,7 @@ public class EndChoreoGenerator extends BodyPart {
   }
 
   public static void main(String[] args) {
-    EndChoreoGenerator ecg1 = new EndChoreoGenerator();
-    System.out.println(ecg1.generate());
+    FinalSolo finalSolo = new FinalSolo();
+    System.out.println(finalSolo.generate());
   }
 }
