@@ -21,7 +21,6 @@ abstract class BodyPart {
     "l_shoulder"
   };
 
-
   // body_part method
   static int body_part() {
     int low = 0;

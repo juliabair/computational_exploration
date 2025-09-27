@@ -36,7 +36,6 @@ public class GeneratorAll extends BodyPart {
     return order;
   }
 
-
   static boolean boolean_output_for_bp() {
     boolean bool = true; // or on floor/toward audience, etc.
     int low = 1;
@@ -110,11 +109,11 @@ public class GeneratorAll extends BodyPart {
   public String generate() {
     String response = "";
 
-
     response += "Model Standing Order: " + model_standing_order() + "\n";
 
     response += "Facing Direction: " + "\n";
-    response += "/*\n"
+    response +=
+        "/*\n"
             + "         * 1 = forward\n"
             + "         * 2 = R\n"
             + "         * 3 = back\n"
@@ -123,10 +122,12 @@ public class GeneratorAll extends BodyPart {
             + "         * 6 = L Front Corner\n"
             + "         * 7 = R Back Corner\n"
             + "         * 8 = L Back Corner\n"
-            + "         */" + "\n";
+            + "         */"
+            + "\n";
 
     response += "Head Directions: " + "\n";
-    response += "/*\n"
+    response +=
+        "/*\n"
             + "         * 1 = forward\n"
             + "         * 2 = R\n"
             + "         * 3 = L\n"
@@ -136,29 +137,36 @@ public class GeneratorAll extends BodyPart {
             + "         * 7 = Bottom L Corner\n"
             + "         * 8 = Top R Corner\n"
             + "         * 9 = Top L Corner\n"
-            + "         */" + "\n";
+            + "         */"
+            + "\n";
 
     response += "Pose:" + "\n";
-    response += "Body Parts: "
+    response +=
+        "Body Parts: "
             + body_parts[body_part()]
             + " "
             + body_parts[body_part()]
             + " "
-            + body_parts[body_part()] + "\n";
-    response += "Modifier 1: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
+            + body_parts[body_part()]
+            + "\n";
+    response +=
+        "Modifier 1: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
             + " beveled? "
-            + boolean_output_for_bp() + "\n";
-    response += "Modifier 2: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
+            + boolean_output_for_bp()
+            + "\n";
+    response +=
+        "Modifier 2: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
             + " beveled? "
-            + boolean_output_for_bp() + "\n";
+            + boolean_output_for_bp()
+            + "\n";
     response += "Facing: " + direction() + "\n";
     response += "Head Direction: " + head_direction() + "\n";
-    
+
     return response;
- }
- 
- public static void main(String[] args){
+  }
+
+  public static void main(String[] args) {
     GeneratorAll ga1 = new GeneratorAll();
     System.out.println(ga1.generate());
- }
+  }
 }

@@ -5,6 +5,9 @@ build:
 		javac -cp ./choreo_gen $${file} ; \
 	done
 
+format:
+	@ java -jar ~/Downloads/google-java-format-1.27.0-all-deps.jar -r choreo_gen/*.java
+
 run: build
 	@ java -cp ./choreo_gen Generator
 	@ java -cp ./choreo_gen GeneratorAll

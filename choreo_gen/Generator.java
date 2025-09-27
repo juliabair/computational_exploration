@@ -37,9 +37,9 @@ public class Generator extends BodyPart {
     return fluid;
   }
 
-  public String generate(){
+  public String generate() {
     String response = "";
-    response += "Quadrant: " + quadrants()+ "\n";
+    response += "Quadrant: " + quadrants() + "\n";
     response += "Fluidity Level: " + fluidity_level() + "\n";
     response += "Body Part 1: " + body_parts[body_part()] + "\n";
     response += "Body Part 2: " + body_parts[body_part()] + "\n";
@@ -48,7 +48,7 @@ public class Generator extends BodyPart {
   }
 
   public static void main(String[] args) {
-    Generator g1 = new Generator(); 
+    Generator g1 = new Generator();
     System.out.println(g1.generate());
   }
 }

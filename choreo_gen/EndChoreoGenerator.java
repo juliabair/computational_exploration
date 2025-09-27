@@ -66,7 +66,6 @@ public class EndChoreoGenerator extends BodyPart {
     return hands_on_self;
   }
 
-
   public String generate() {
     String response = "";
 
@@ -74,25 +73,29 @@ public class EndChoreoGenerator extends BodyPart {
     response += "Focus Out Toward Audience, etc: " + focus() + "\n";
     response += "Hands on self: " + hands() + "\n";
 
-    response += "Body Parts Together 1: "
+    response +=
+        "Body Parts Together 1: "
             + body_parts[body_part()]
             + " "
             + body_parts[body_part()]
             + " | Speed: "
             + speed()
-            + "/4" + "\n";
-    response += "Body Parts Together 2: "
+            + "/4"
+            + "\n";
+    response +=
+        "Body Parts Together 2: "
             + body_parts[body_part()]
             + " "
             + body_parts[body_part()]
             + " | Speed: "
             + speed()
-            + "/4" + "\n";
+            + "/4"
+            + "\n";
 
     return response;
   }
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
     EndChoreoGenerator ecg1 = new EndChoreoGenerator();
     System.out.println(ecg1.generate());
   }
