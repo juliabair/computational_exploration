@@ -9,9 +9,9 @@ format:
 	@ java -jar ~/Downloads/google-java-format-1.27.0-all-deps.jar -r choreo_gen/*.java
 
 run: build
-	@ java -cp ./choreo_gen Generator
-	@ java -cp ./choreo_gen GeneratorAll
-	@ java -cp ./choreo_gen EndChoreoGenerator
+	@ java -cp ./choreo_gen FirstSolo
+	@ java -cp ./choreo_gen ModelPoses
+	@ java -cp ./choreo_gen FinalSolo
 
 clean:
 	@ find . -name "*.class" | while read file; do \
