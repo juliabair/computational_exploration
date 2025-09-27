@@ -1,7 +1,7 @@
 
 build:
 	@ find . -name "*.java" | while read file; do \
-		echo "Compliing: file=$${file}" ; \
+		echo "Compling: file=$${file}" ; \
 		javac $${file} ; \
 	done
 
