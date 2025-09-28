@@ -20,7 +20,7 @@ class BodyPart {
     "r_shoulder",
     "l_shoulder"
   };
-  
+
   public String get() {
     int low = 0;
     int high = 16;
@@ -31,7 +31,7 @@ class BodyPart {
 
   public static void main(String[] args) {
     BodyPart bp = new BodyPart();
-    
+
     System.out.println("Body Part 1: " + bp.get());
     System.out.println("Body Part 2: " + bp.get());
     System.out.println("Body Part 3: " + bp.get());

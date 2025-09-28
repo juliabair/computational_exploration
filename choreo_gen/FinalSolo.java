@@ -2,7 +2,7 @@ public class FinalSolo extends Solo {
 
   BodyPart bodyPart;
 
-  public FinalSolo(){
+  public FinalSolo() {
     bodyPart = new BodyPart();
   }
 

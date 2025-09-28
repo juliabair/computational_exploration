@@ -2,7 +2,7 @@ class FirstSolo extends Solo {
 
   BodyPart bodyPart;
 
-  public FirstSolo(){
+  public FirstSolo() {
     bodyPart = new BodyPart();
   }
 

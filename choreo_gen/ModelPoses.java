@@ -2,9 +2,9 @@ import java.util.*;
 
 public class ModelPoses {
 
-    BodyPart bodyPart;
+  BodyPart bodyPart;
 
-  public ModelPoses(){
+  public ModelPoses() {
     bodyPart = new BodyPart();
   }
 
@@ -128,13 +128,7 @@ public class ModelPoses {
 
     response += "Pose:" + "\n";
     response +=
-        "Body Parts: "
-            + bodyPart.get()
-            + " "
-            + bodyPart.get()
-            + " "
-            + bodyPart.get()
-            + "\n";
+        "Body Parts: " + bodyPart.get() + " " + bodyPart.get() + " " + bodyPart.get() + "\n";
     response +=
         "Modifier 1: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
             + " beveled? "
