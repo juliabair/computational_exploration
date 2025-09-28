@@ -1,4 +1,10 @@
-public class FirstSolo extends BodyPart {
+class FirstSolo extends Solo {
+
+  BodyPart bodyPart;
+
+  public FirstSolo(){
+    bodyPart = new BodyPart();
+  }
 
   static int quadrants() {
     int low = 1;
@@ -20,9 +26,9 @@ public class FirstSolo extends BodyPart {
     String response = "";
     response += "Quadrant: " + quadrants() + "\n";
     response += "Fluidity Level: " + fluidity_level() + "\n";
-    response += "Body Part 1: " + body_parts[body_part()] + "\n";
-    response += "Body Part 2: " + body_parts[body_part()] + "\n";
-    response += "Body Part 3: " + body_parts[body_part()] + "\n";
+    response += "Body Part 1: " + bodyPart.get() + "\n";
+    response += "Body Part 2: " + bodyPart.get() + "\n";
+    response += "Body Part 3: " + bodyPart.get() + "\n";
     return response;
   }
 

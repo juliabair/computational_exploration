@@ -1,9 +1,23 @@
 
 build:
-	@ find . -name "*.java" | while read file; do \
-		echo "Compling: file=$${file}" ; \
-		javac -cp ./choreo_gen $${file} ; \
-	done
+	@  \
+	echo "==> " javac -cp ./choreo_gen choreo_gen/Solo.java ; \
+	javac -cp ./choreo_gen choreo_gen/Solo.java ; \
+	\
+	echo "==> " javac -cp ./choreo_gen choreo_gen/BodyPart.java ; \
+	javac -cp ./choreo_gen choreo_gen/BodyPart.java ; \
+	\
+	echo "==> " javac -cp ./choreo_gen choreo_gen/FinalSolo.java ; \
+	javac -cp ./choreo_gen choreo_gen/FinalSolo.java ; \
+	\
+	echo "==> " javac -cp ./choreo_gen choreo_gen/FirstSolo.java ; \
+	javac -cp ./choreo_gen choreo_gen/FirstSolo.java ; \
+	\
+	echo "==> " javac -cp ./choreo_gen choreo_gen/ModelPoses.java ; \
+	javac -cp ./choreo_gen choreo_gen/ModelPoses.java ; \
+	\
+	echo "==> " javac -cp ./choreo_gen choreo_gen/ChoreoGen.java ; \
+	javac -cp ./choreo_gen choreo_gen/ChoreoGen.java
 
 format:
 	@ java -jar ~/Downloads/google-java-format-1.27.0-all-deps.jar -r choreo_gen/*.java

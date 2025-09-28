@@ -1,4 +1,10 @@
-public class FinalSolo extends BodyPart {
+public class FinalSolo extends Solo {
+
+  BodyPart bodyPart;
+
+  public FinalSolo(){
+    bodyPart = new BodyPart();
+  }
 
   static int quadrants() {
     int low = 1;
@@ -55,18 +61,18 @@ public class FinalSolo extends BodyPart {
 
     response +=
         "Body Parts Together 1: "
-            + body_parts[body_part()]
+            + bodyPart.get()
             + " "
-            + body_parts[body_part()]
+            + bodyPart.get()
             + " | Speed: "
             + speed()
             + "/4"
             + "\n";
     response +=
         "Body Parts Together 2: "
-            + body_parts[body_part()]
+            + bodyPart.get()
             + " "
-            + body_parts[body_part()]
+            + bodyPart.get()
             + " | Speed: "
             + speed()
             + "/4"

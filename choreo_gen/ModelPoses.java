@@ -1,6 +1,12 @@
 import java.util.*;
 
-public class ModelPoses extends BodyPart {
+public class ModelPoses {
+
+    BodyPart bodyPart;
+
+  public ModelPoses(){
+    bodyPart = new BodyPart();
+  }
 
   // Method: to decide order of models?
   static ArrayList<String> model_standing_order() {
@@ -123,11 +129,11 @@ public class ModelPoses extends BodyPart {
     response += "Pose:" + "\n";
     response +=
         "Body Parts: "
-            + body_parts[body_part()]
+            + bodyPart.get()
             + " "
-            + body_parts[body_part()]
+            + bodyPart.get()
             + " "
-            + body_parts[body_part()]
+            + bodyPart.get()
             + "\n";
     response +=
         "Modifier 1: arm, leg, bent? OR Hip popped? OR hand on hip? OR head tilted? OR foot"
